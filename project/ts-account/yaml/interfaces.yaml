@@ -1,0 +1,39 @@
+definitions:
+  ResCommon:
+    type: 'object'
+    properties:
+      errorCode:
+        type: 'number'
+        description: 'enum EErrorCode 참조'
+  ReqLogin:
+    type: 'object'
+    properties:
+      id:
+        type: 'string'
+        example: 'test'
+      pw:
+        type: 'string'
+        example: 'test'
+  ResLogin:
+    type: 'object'
+    properties:
+      ResCommon:
+        $ref: '#/definitions/ResCommon'
+  ReqLogout:
+    type: 'object'
+    properties:
+  ResLogout:
+    type: 'object'
+    properties:
+      ResCommon:
+        $ref: '#/definitions/ResCommon'
+  ReqUserStatus:
+    type: 'object'
+    properties:
+  ResUserStatus:
+    type: 'object'
+    properties:
+      id:
+        type: 'string'
+      accountUsn:
+        type: 'number'

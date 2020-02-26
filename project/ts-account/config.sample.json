@@ -1,0 +1,20 @@
+{
+  "$schema": "./schema/config.schema.json",
+  "secret": "",
+  "port": 0,
+  "maxAge": 0,
+  "redisStore": {
+    "host": "",
+    "port": 0,
+    "db": 0,
+    "password": ""
+  },
+  "mysqlPool": {
+    "host": "",
+    "port": 0,
+    "user": "",
+    "password": "",
+    "database": "",
+    "connectionLimit": 0
+  }
+}

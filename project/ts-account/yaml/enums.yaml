@@ -1,0 +1,12 @@
+definitions:
+  enum EErrorCode:
+    type: 'object'
+    properties:
+      success:
+        type: '0 - 성공'
+      fail:
+        type: '-1 - 실패'
+      loginFail:
+        type: '1000 - 로그인 실패'
+      loginDuplicate:
+        type: '1001 - 중복 로그인'

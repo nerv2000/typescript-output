@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/IConfig",
+  "definitions": {
+      "IDefaultConfig": {
+          "description": "기본 설정",
+          "title": "IDefaultConfig",
+          "type": "object",
+          "properties": {
+              "secret": {
+                  "description": "session 암호",
+                  "type": "string",
+                  "title": "secret"
+              },
+              "port": {
+                  "description": "서버 port 번호",
+                  "type": "number",
+                  "title": "port"
+              },
+              "maxAge": {
+                  "description": "만료 시간",
+                  "type": "number",
+                  "title": "maxAge"
+              }
+          },
+          "required": [
+              "maxAge",
+              "port",
+              "secret"
+          ]
+      },
+      "IRedisConfig": {
+          "description": "redis 접속 정보",
+          "title": "IRedisConfig",
+          "type": "object",
+          "properties": {
+              "host": {
+                  "type": "string",
+                  "title": "host"
+              },
+              "port": {
+                  "type": "number",
+                  "title": "port"
+              },
+              "db": {
+                  "type": "number",
+                  "title": "db"
+              },
+              "password": {
+                  "type": "string",
+                  "title": "password"
+              }
+          },
+          "required": [
+              "db",
+              "host",
+              "port"
+          ]
+      },
+      "IMysqlConfig": {
+          "description": "mysql 접속 정보",
+          "title": "IMysqlConfig",
+          "type": "object",
+          "properties": {
+              "host": {
+                  "type": "string",
+                  "title": "host"
+              },
+              "port": {
+                  "type": "number",
+                  "title": "port"
+              },
+              "user": {
+                  "type": "string",
+                  "title": "user"
+              },
+              "password": {
+                  "type": "string",
+                  "title": "password"
+              },
+              "database": {
+                  "type": "string",
+                  "title": "database"
+              },
+              "connectionLimit": {
+                  "type": "number",
+                  "title": "connectionLimit"
+              }
+          },
+          "required": [
+              "database",
+              "host",
+              "password",
+              "port",
+              "user"
+          ]
+      },
+      "IConfig": {
+          "description": "기본 서버 config",
+          "title": "IConfig",
+          "type": "object",
+          "properties": {
+              "redisStore": {
+                  "$ref": "#/definitions/IRedisConfig",
+                  "description": "session redis stroe 접속 세팅값",
+                  "title": "redisStore"
+              },
+              "mysqlPool": {
+                  "$ref": "#/definitions/IMysqlConfig",
+                  "description": "mysql 접속 세팅값",
+                  "title": "mysqlPool"
+              },
+              "secret": {
+                  "description": "session 암호",
+                  "type": "string",
+                  "title": "secret"
+              },
+              "port": {
+                  "description": "서버 port 번호",
+                  "type": "number",
+                  "title": "port"
+              },
+              "maxAge": {
+                  "description": "만료 시간",
+                  "type": "number",
+                  "title": "maxAge"
+              }
+          },
+          "required": [
+              "maxAge",
+              "mysqlPool",
+              "port",
+              "redisStore",
+              "secret"
+          ]
+      }
+  }
+}
