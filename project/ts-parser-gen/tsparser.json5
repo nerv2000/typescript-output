@@ -1,0 +1,9 @@
+// 참고
+// 기본 경로는 프로그램 실행 위치 입니다.
+// path는 상대 경로로 넣어주면 됩니다.
+{
+  "readFilePath": "data",                          // 파싱할 폴더 위치
+  "yamlOutputPath": "/yaml",                       // ymal 파일 생성 위치
+  // "yamlEnumfileName": "enums.yaml",             // enum 파싱후 생성한 yaml 파일명
+  // "yamlInterfaceFileName": "interfaces.yaml"    // interface 파싱후 생성한 yaml 파일명
+}
